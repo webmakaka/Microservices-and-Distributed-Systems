@@ -1,5 +1,7 @@
 # [Nelson] Microservices and Distributed Systems [ENG, 2022]
 
+**Course Website**  
+https://amigoscode.com/p/microservices
 
 **Original Github Repo:**  
 https://github.com/amigoscode/microservices
@@ -8,8 +10,18 @@ https://github.com/amigoscode/microservices
 https://www.diagrams.net
 
 Open:  
-https://raw.githubusercontent.com/amigoscode/microservices/78d93c2caa7274951ff5258e5414a59b870f50a9/diagrams.drawio
+diagrams/diagrams.drawio
 
+
+<br/>
+
+```
+$ sudo apt install -y jq
+```
+
+<br/>
+
+![Application](/img/pic-m01-01.png?raw=true)
 
 
 <br/>
