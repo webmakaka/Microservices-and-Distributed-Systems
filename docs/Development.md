@@ -79,6 +79,26 @@ SELECT * FROM fraud_check_history;
 ![Application](/img/pic-m04-p01.png?raw=true)
 
 
+<br/>
+
+## 05. Service Discovery with Eureka
+
+
+<br/>
+
+
+https://spring.io/projects/spring-cloud
+
+
+<br/>
+
+http://localhost:8761/
+
+<br/>
+
+![Application](/img/pic-m05-p01.png?raw=true)
+
+
 <br/><br/>
 
 ---
