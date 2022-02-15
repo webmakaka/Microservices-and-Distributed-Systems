@@ -21,7 +21,7 @@ $ sudo apt install -y jq
 
 <br/>
 
-![Application](/img/pic-m01-01.png?raw=true)
+![Application](/img/pic-01-diagram.png?raw=true)
 
 
 <br/>

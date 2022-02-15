@@ -54,6 +54,30 @@ $ curl \
 ![Application](/img/pic-m03-p01.png?raw=true)
 
 
+<br/>
+
+## 04. Microservice Communication via HTTP
+
+<br/>
+
+**create fraud database manually**
+
+<br/>
+
+```
+// CREATE CUSTOMER
+```
+
+<br/>
+
+```
+SELECT * FROM fraud_check_history;
+```
+
+<br/>
+
+![Application](/img/pic-m04-p01.png?raw=true)
+
 
 <br/><br/>
 
