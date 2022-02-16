@@ -99,6 +99,19 @@ http://localhost:8761/
 ![Application](/img/pic-m05-p01.png?raw=true)
 
 
+<br/>
+
+## 06. Open Feign
+
+https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/
+
+
+<br/>
+
+```
+// CREATE CUSTOMER
+```
+
 <br/><br/>
 
 ---

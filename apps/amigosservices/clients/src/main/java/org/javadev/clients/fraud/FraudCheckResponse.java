@@ -1,4 +1,4 @@
-package org.javadev.customer;
+package org.javadev.clients.fraud;
 
 public record FraudCheckResponse(Boolean isFraudster) {
 }
