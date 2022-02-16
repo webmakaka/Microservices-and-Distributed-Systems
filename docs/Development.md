@@ -29,7 +29,7 @@ $ docker-compose up
 
 <br/>
 
-**create db customer manually**
+**create "customer" database manually**
 
 <br/>
 
@@ -60,7 +60,7 @@ $ curl \
 
 <br/>
 
-**create fraud database manually**
+**create "fraud" database manually**
 
 <br/>
 
@@ -111,6 +111,18 @@ https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/
 ```
 // CREATE CUSTOMER
 ```
+
+<br/>
+
+## 07. Exercise
+
+<br/>
+
+**create "notification" database manually**
+
+<br/>
+
+![Application](/img/pic-m06-p01.png?raw=true)
 
 <br/><br/>
 
