@@ -124,6 +124,41 @@ https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/
 
 ![Application](/img/pic-m06-p01.png?raw=true)
 
+<br/>
+
+## 08. Distributed Tracing
+
+https://spring.io/projects/spring-cloud-sleuth
+
+https://zipkin.io/
+
+<br/>
+
+```
+$ docker-compose up -d
+$ docker logs zipkin
+```
+
+<br/>
+
+```
+// CREATE CUSTOMER
+```
+
+<br/>
+
+http://127.0.0.1:9411/zipkin/
+
+
+<br/>
+
+![Application](/img/pic-m08-p01.png?raw=true)
+
+<br/>
+
+![Application](/img/pic-m08-p02.png?raw=true)
+
+
 <br/><br/>
 
 ---
