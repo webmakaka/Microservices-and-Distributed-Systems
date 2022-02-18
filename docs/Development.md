@@ -158,6 +158,19 @@ http://127.0.0.1:9411/zipkin/
 
 ![Application](/img/pic-m08-p02.png?raw=true)
 
+<br/>
+
+## 09. Api Gateway With Spring Cloud Gateway
+
+https://spring.io/projects/spring-cloud-gateway
+
+
+<br/>
+
+![Application](/img/pic-m08-p01.png?raw=true)
+
+
+
 
 <br/><br/>
 
