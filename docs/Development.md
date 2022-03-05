@@ -167,10 +167,50 @@ https://spring.io/projects/spring-cloud-gateway
 
 <br/>
 
-![Application](/img/pic-m08-p01.png?raw=true)
+![Application](/img/pic-m09-p01.png?raw=true)
+
+<br/>
+
+## 10. Message Queues
 
 
+<br/>
 
+## 11. RabbitMQ
+
+```
+$ docker-compose up -d
+```
+
+<br/>
+
+http://localhost:15672/
+
+<br/>
+
+guest/guest
+
+
+<br/>
+
+```
+// GW CREATE CUSTOMER
+// POST
+$ curl \
+    --data '{
+      "firstName":"Jamila",
+      "lastName":"Ahmed",
+      "email":"jahmed@gmail.com"
+      }' \
+    --header "Content-Type: application/json" \
+    --request POST \
+    --url http://localhost:8083/api/v1/customers \
+    | jq
+```
+
+<br/>
+
+![Application](/img/pic-m11-p01.png?raw=true)
 
 <br/><br/>
 
