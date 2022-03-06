@@ -212,6 +212,29 @@ $ curl \
 
 ![Application](/img/pic-m11-p01.png?raw=true)
 
+<br/>
+
+## 12. Packaging Microservices to Runnable Jar
+
+<br/>
+
+```
+$ mvn clean
+$ mvn package
+$ mvn install
+```
+
+<br/>
+
+```
+$ java -jar eureka-server/target/eureka-server-1.0-SNAPSHOT.jar
+$ java -jar customer/target/customer-1.0-SNAPSHOT.jar
+****
+```
+
+
+
+
 <br/><br/>
 
 ---
