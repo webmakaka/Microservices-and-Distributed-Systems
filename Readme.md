@@ -15,6 +15,11 @@ diagrams/diagrams.drawio
 
 <br/>
 
+### [JDK17 should be installed](//javadev.org/devtools/jdk/setup/linux/)
+
+<br/>
+
+
 ```
 $ sudo apt install -y jq
 ```

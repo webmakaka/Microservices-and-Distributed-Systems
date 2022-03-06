@@ -233,7 +233,97 @@ $ java -jar customer/target/customer-1.0-SNAPSHOT.jar
 ```
 
 
+<br/>
 
+## 13. Packaging Jars to Docker Images
+
+https://github.com/GoogleContainerTools/jib
+
+https://hub.docker.com/_/eclipse-temurin/
+
+
+<br/>
+
+```
+$ docker logout
+$ docker login
+```
+
+<br/>
+
+```
+$ mvn clean package -P build-docker-image
+```
+
+<br/>
+
+```
+[INFO] 
+[INFO] amigosservices ..................................... SUCCESS [  0.075 s]
+[INFO] amqp ............................................... SUCCESS [  1.824 s]
+[INFO] clients ............................................ SUCCESS [  0.441 s]
+[INFO] customer ........................................... SUCCESS [ 10.978 s]
+[INFO] fraud .............................................. SUCCESS [  9.214 s]
+[INFO] eureka-server ...................................... SUCCESS [  8.539 s]
+[INFO] notification ....................................... SUCCESS [  9.656 s]
+[INFO] apigw .............................................. SUCCESS [  8.667 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  49.666 s
+[INFO] Finished at: 2022-03-06T20:01:10+03:00
+[INFO] ------------------------------------------------------------------------
+```
+
+<br/>
+
+```
+$ docker-compose pull
+$ docker-compose up -d
+```
+
+<br/>
+
+```
+$ docker logs apigw
+```
+
+<br/>
+
+```
+$ docker-compose ps
+```
+
+<br/>
+
+http://localhost:8761/
+
+
+<br/>
+
+
+![Application](/img/pic-m13-p01.png?raw=true)
+
+
+<br/>
+
+
+```
+// GW CREATE CUSTOMER
+```
+
+<br/>
+
+
+![Application](/img/pic-m13-p02.png?raw=true)
+
+
+
+<br/>
+
+```
+$ docker-compose stop
+```
 
 <br/><br/>
 
