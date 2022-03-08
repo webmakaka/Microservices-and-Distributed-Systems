@@ -419,6 +419,56 @@ rabbitmq     NodePort       10.97.82.207   <none>         15672:31672/TCP,5672:3
 zipkin       LoadBalancer   10.103.34.77   10.103.34.77   9411:32322/TCP                   4m26s
 ```
 
+<br/>
+
+## 16. Refactoring Microservices for k8s
+
+Eureka server is not needed anymore.
+
+<br/>
+
+For customer, fraud, notification add ENVIRONMENT VARIABLE
+
+SPRING_PROFILE_ACTIVE=default
+
+<br/>
+
+![Application](/img/pic-m16-p01.png?raw=true)
+
+<br/>
+
+```
+// CREATE CUSTOMER
+```
+
+<br/>
+
+
+<br/>
+
+```
+$ mvn clean package -P build-docker-image
+```
+
+<br/>
+
+```
+$ docker-compose pull
+$ docker-compose up -d
+```
+
+<br/>
+
+```
+// CREATE CUSTOMER
+```
+
+<br/>
+
+```
+$ docker-compose down
+```
+
 
 <br/><br/>
 
