@@ -237,6 +237,8 @@ $ java -jar customer/target/customer-1.0-SNAPSHOT.jar
 
 ## 13. Packaging Jars to Docker Images
 
+<br/>
+
 https://github.com/GoogleContainerTools/jib
 
 https://hub.docker.com/_/eclipse-temurin/
@@ -324,6 +326,99 @@ http://localhost:8761/
 ```
 $ docker-compose stop
 ```
+
+
+<br/>
+
+## 14. Kubernetes AKA k8s
+
+minikube
+
+<br/>
+
+## 15. Deploying Postgres RabbitMQ and Zipkin to k8s
+
+
+<br/>
+
+![Application](/img/pic-m15-p01.png?raw=true)
+
+<br/>
+
+```
+$ cd k8s
+$ kubectl apply -f ./minikube/bootstrap/postgres
+```
+
+<br/>
+
+```
+$ minikube ssh
+$ cd mnt/
+$ ls
+```
+
+<br/>
+
+```
+$ kubectl exec -it postgres-0 -- psql -U amigoscode
+```
+
+<br/>
+
+```
+create database customer;
+create database fraud;
+create database notification;
+exit
+```
+
+<br/>
+
+```
+$ kubectl apply -f ./minikube/bootstrap/zipkin
+$ kubectl apply -f ./minikube/bootstrap/rabbitmq
+```
+
+<br/>
+
+![Application](/img/pic-m15-p02.png?raw=true)
+
+
+<br/>
+
+```
+$ minikube --profile ${PROFILE} service --url rabbitmq
+```
+
+
+<br/>
+
+```
+$ minikube --profile ${PROFILE} service --url zipkin
+```
+
+<br/>
+
+```
+$ minikube --profile ${PROFILE} tunnel 
+```
+
+<br/>
+
+```
+$ kubectl get services
+```
+
+```
+$ kubectl get services
+NAME         TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                          AGE
+kubernetes   ClusterIP      10.96.0.1      <none>         443/TCP                          27m
+postgres     ClusterIP      10.109.58.56   <none>         5432/TCP                         6m
+rabbitmq     NodePort       10.97.82.207   <none>         15672:31672/TCP,5672:30672/TCP   4m21s
+zipkin       LoadBalancer   10.103.34.77   10.103.34.77   9411:32322/TCP                   4m26s
+```
+
 
 <br/><br/>
 
