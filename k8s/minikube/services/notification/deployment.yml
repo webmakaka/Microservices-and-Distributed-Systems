@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: notification
-          image: amigoscode/notification:latest
+          image: webmakaka/notification:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8083

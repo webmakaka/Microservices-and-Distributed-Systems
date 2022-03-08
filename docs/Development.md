@@ -410,6 +410,8 @@ $ minikube --profile ${PROFILE} tunnel
 $ kubectl get services
 ```
 
+<br/>
+
 ```
 $ kubectl get services
 NAME         TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                          AGE
@@ -468,6 +470,80 @@ $ docker-compose up -d
 ```
 $ docker-compose down
 ```
+
+<br/>
+
+## 17. Deploying Microservices to k8s
+
+
+<br/>
+
+```
+$ kubectl apply -f ./minikube/services/customer/
+$ kubectl apply -f ./minikube/services/fraud/
+$ kubectl apply -f ./minikube/services/notification/
+```
+
+<br/>
+
+```
+$ minikube --profile ${PROFILE} tunnel
+```
+
+<br/>
+
+```
+$ kubectl get services
+NAME           TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)                          AGE
+customer       LoadBalancer   10.111.16.127   10.111.16.127   80:32225/TCP                     15m
+fraud          NodePort       10.111.4.172    <none>          80:30793/TCP                     9m37s
+kubernetes     ClusterIP      10.96.0.1       <none>          443/TCP                          6h4m
+notification   NodePort       10.104.52.241   <none>          80:30234/TCP                     9m26s
+postgres       ClusterIP      10.109.58.56    <none>          5432/TCP                         5h43m
+rabbitmq       NodePort       10.97.82.207    <none>          15672:31672/TCP,5672:30672/TCP   5h41m
+zipkin         LoadBalancer   10.103.34.77    10.103.34.77    9411:32322/TCP                   5h41m
+
+```
+
+
+<br/>
+
+```
+// POST
+$ curl \
+    --data '{
+      "firstName":"Jamila",
+      "lastName":"Ahmed",
+      "email":"jahmed@gmail.com"
+      }' \
+    --header "Content-Type: application/json" \
+    --request POST \
+    --url http://10.111.16.127/api/v1/customers \
+    | jq
+```
+
+
+<br/>
+
+```
+$ kubectl exec -it postgres-0 -- psql -U amigoscode
+# \c notification 
+# select * from public.notification ORDER BY notification_id ASC;
+```
+
+<br/>
+
+
+```
+ notification_id |               message               |   sender   |          sent_at           | to_custoemer_id | to_customer_email 
+-----------------+-------------------------------------+------------+----------------------------+-----------------+-------------------
+               1 | Hi Jamila, welcome to Amigoscode... | Amigoscode | 2022-03-08 11:18:28.433199 |               1 | jahmed@gmail.com
+(1 row)
+```
+
+<br/>
+
+![Application](/img/pic-m17-p01.png?raw=true)
 
 
 <br/><br/>

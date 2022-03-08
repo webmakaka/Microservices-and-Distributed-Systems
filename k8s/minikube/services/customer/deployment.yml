@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: customer
-          image: amigoscode/customer:latest
+          image: webmakaka/customer:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
