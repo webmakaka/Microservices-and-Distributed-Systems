@@ -17,6 +17,8 @@ diagrams/diagrams.drawio
 
 ### [JDK17 should be installed](//javadev.org/devtools/jdk/setup/linux/)
 
+### MAVEN should be installed
+
 <br/>
 
 
