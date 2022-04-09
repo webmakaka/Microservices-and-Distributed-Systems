@@ -546,6 +546,12 @@ $ kubectl exec -it postgres-0 -- psql -U amigoscode
 ![Application](/img/pic-m17-p01.png?raw=true)
 
 
+<br/>
+
+## 18. Kafka
+
+https://github.com/webmak1/Kafka-Tutorial
+
 <br/><br/>
 
 ---
